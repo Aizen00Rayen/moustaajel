@@ -1,0 +1,9 @@
+{
+  "appId": "com.moustaajel.app",
+  "appName": "مستعجل",
+  "webDir": "dist",
+  "backgroundColor": "#0e3a53",
+  "android": {
+    "allowMixedContent": false
+  }
+}

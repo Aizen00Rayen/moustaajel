@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">مستعجل</string>
+    <string name="title_activity_main">مستعجل</string>
+    <string name="package_name">com.moustaajel.app</string>
+    <string name="custom_url_scheme">com.moustaajel.app</string>
+</resources>
