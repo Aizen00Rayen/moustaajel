@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 import { useData } from '../context/DataContext'
+import logoImg from '../assets/logo.png'
 
 const SEGMENTS = ['individual', 'lawyer', 'notary', 'expert', 'company']
 
@@ -33,22 +34,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex justify-center">
             <div className="h-72 w-72 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-              <svg viewBox="0 0 100 100" className="h-56 w-56">
-                <g stroke="#37b6e0" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="50" y1="14" x2="50" y2="30" />
-                  <line x1="28" y1="20" x2="72" y2="20" />
-                  <line x1="28" y1="20" x2="18" y2="36" />
-                  <line x1="28" y1="20" x2="38" y2="36" />
-                  <path d="M14 36 a14 10 0 0 0 28 0 Z" />
-                  <line x1="72" y1="20" x2="62" y2="36" />
-                  <line x1="72" y1="20" x2="82" y2="36" />
-                  <path d="M58 36 a14 10 0 0 0 28 0 Z" />
-                </g>
-                <g fill="#f4f8fb">
-                  <circle cx="60" cy="45" r="6" />
-                  <path d="M40 95c1-9 4-16 10-21l7-14-10-9-8 8-6-5 11-12c2-2 6-3 9-2l13 5 9 11-6 5-6-8-4 7 9 10c3 3 5 8 5 12l1 13h-7l-1-12-10-10-6 13c3 4 6 9 6 15z" />
-                </g>
-              </svg>
+              <img src={logoImg} alt="مستعجل" className="h-56 w-56 object-contain" />
             </div>
           </div>
         </div>
