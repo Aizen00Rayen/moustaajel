@@ -2,6 +2,19 @@ name: Build Android APK
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - claude/react-website-document-specs-c8cqo3
+    paths:
+      - "android/**"
+      - "src/**"
+      - "public/**"
+      - "package.json"
+      - "package-lock.json"
+      - "capacitor.config.json"
+      - "vite.config.js"
+      - "index.html"
+      - ".github/workflows/android-build.yml"
 
 jobs:
   build:
