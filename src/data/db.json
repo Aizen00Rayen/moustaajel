@@ -1,0 +1,219 @@
+{
+  "settings": {
+    "commissionRate": 0.12,
+    "clientServiceFee": 500,
+    "currency": "DZD"
+  },
+  "pricingPlans": [
+    {
+      "id": "basic",
+      "nameKey": "plan_basic",
+      "price": 0,
+      "period": "month",
+      "featuresKey": ["plan_basic_f1", "plan_basic_f2", "plan_basic_f3"]
+    },
+    {
+      "id": "pro",
+      "nameKey": "plan_pro",
+      "price": 3500,
+      "period": "month",
+      "featuresKey": ["plan_pro_f1", "plan_pro_f2", "plan_pro_f3", "plan_pro_f4"]
+    },
+    {
+      "id": "premium",
+      "nameKey": "plan_premium",
+      "price": 7500,
+      "period": "month",
+      "featuresKey": ["plan_premium_f1", "plan_premium_f2", "plan_premium_f3", "plan_premium_f4", "plan_premium_f5"]
+    }
+  ],
+  "users": [
+    {
+      "id": "u-admin",
+      "role": "admin",
+      "name": "مدير المنصة",
+      "email": "admin@moustaajel.dz",
+      "password": "admin123",
+      "phone": "0550000000",
+      "createdAt": "2026-01-05T09:00:00.000Z"
+    },
+    {
+      "id": "u-client-1",
+      "role": "client",
+      "name": "سفيان قنفود",
+      "email": "client@example.com",
+      "password": "123456",
+      "phone": "0551122334",
+      "clientType": "individual",
+      "wilayaId": 13,
+      "createdAt": "2026-02-10T10:00:00.000Z"
+    },
+    {
+      "id": "u-client-2",
+      "role": "client",
+      "name": "مكتب المحاماة بن يحيى",
+      "email": "avocat@example.com",
+      "password": "123456",
+      "phone": "0552233445",
+      "clientType": "lawyer",
+      "wilayaId": 16,
+      "createdAt": "2026-02-15T10:00:00.000Z"
+    },
+    {
+      "id": "u-huissier-1",
+      "role": "huissier",
+      "name": "الأستاذ كريم بوقادة",
+      "email": "huissier@example.com",
+      "password": "123456",
+      "phone": "0553344556",
+      "createdAt": "2026-01-20T10:00:00.000Z"
+    },
+    {
+      "id": "u-huissier-2",
+      "role": "huissier",
+      "name": "الأستاذة أمينة شريف",
+      "email": "huissier2@example.com",
+      "password": "123456",
+      "phone": "0554455667",
+      "createdAt": "2026-01-22T10:00:00.000Z"
+    },
+    {
+      "id": "u-huissier-3",
+      "role": "huissier",
+      "name": "الأستاذ ياسين مرابط",
+      "email": "huissier3@example.com",
+      "password": "123456",
+      "phone": "0555566778",
+      "createdAt": "2026-01-25T10:00:00.000Z"
+    },
+    {
+      "id": "u-huissier-4",
+      "role": "huissier",
+      "name": "الأستاذة سارة بلعيد",
+      "email": "huissier4@example.com",
+      "password": "123456",
+      "phone": "0556677889",
+      "createdAt": "2026-02-01T10:00:00.000Z"
+    }
+  ],
+  "huissiers": [
+    {
+      "id": "h-1",
+      "userId": "u-huissier-1",
+      "officeName": "مكتب المحضر القضائي بوقادة",
+      "wilayaIds": [13, 22, 46],
+      "available": true,
+      "verified": true,
+      "plan": "premium",
+      "bio": "محضر قضائي معتمد بمحكمة تلمسان، خبرة تفوق 12 سنة في التبليغات والمعاينات والتنفيذ.",
+      "rating": 4.8,
+      "reviewsCount": 15,
+      "completedMissions": 132
+    },
+    {
+      "id": "h-2",
+      "userId": "u-huissier-2",
+      "officeName": "مكتب المحضرة القضائية شريف",
+      "wilayaIds": [16, 9, 35],
+      "available": true,
+      "verified": true,
+      "plan": "pro",
+      "bio": "محضرة قضائية بالجزائر العاصمة، متخصصة في قضايا التنفيذ التجاري.",
+      "rating": 4.6,
+      "reviewsCount": 9,
+      "completedMissions": 74
+    },
+    {
+      "id": "h-3",
+      "userId": "u-huissier-3",
+      "officeName": "مكتب المحضر القضائي مرابط",
+      "wilayaIds": [31, 46],
+      "available": false,
+      "verified": true,
+      "plan": "basic",
+      "bio": "محضر قضائي بوهران، متابعة يومية للملفات العاجلة وغير العاجلة.",
+      "rating": 4.2,
+      "reviewsCount": 5,
+      "completedMissions": 41
+    },
+    {
+      "id": "h-4",
+      "userId": "u-huissier-4",
+      "officeName": "مكتب المحضرة القضائية بلعيد",
+      "wilayaIds": [25, 19],
+      "available": true,
+      "verified": false,
+      "plan": "basic",
+      "bio": "محضرة قضائية بقسنطينة، حديثة الانضمام إلى المنصة.",
+      "rating": 0,
+      "reviewsCount": 0,
+      "completedMissions": 0
+    }
+  ],
+  "requests": [
+    {
+      "id": "r-1",
+      "clientId": "u-client-1",
+      "huissierId": "h-1",
+      "type": "signification",
+      "urgency": "urgent",
+      "wilayaId": 13,
+      "address": "حي كودية الطلبة، تلمسان",
+      "description": "تبليغ استدعاء بالحضور لجلسة الأربعاء القادم بمحكمة تلمسان.",
+      "status": "in_progress",
+      "createdAt": "2026-06-25T08:30:00.000Z",
+      "documents": [{ "name": "استدعاء.pdf" }],
+      "price": 4500,
+      "paid": false,
+      "timeline": [
+        { "status": "pending", "at": "2026-06-25T08:30:00.000Z" },
+        { "status": "accepted", "at": "2026-06-25T09:10:00.000Z" },
+        { "status": "in_progress", "at": "2026-06-26T08:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "r-2",
+      "clientId": "u-client-2",
+      "huissierId": "h-1",
+      "type": "execution",
+      "urgency": "standard",
+      "wilayaId": 13,
+      "address": "المنطقة الصناعية، مغنية",
+      "description": "تنفيذ حكم قضائي نهائي صادر عن محكمة تلمسان التجارية.",
+      "status": "completed",
+      "createdAt": "2026-06-10T08:30:00.000Z",
+      "documents": [{ "name": "الحكم القضائي.pdf" }],
+      "price": 12000,
+      "paid": true,
+      "timeline": [
+        { "status": "pending", "at": "2026-06-10T08:30:00.000Z" },
+        { "status": "accepted", "at": "2026-06-10T11:00:00.000Z" },
+        { "status": "in_progress", "at": "2026-06-12T09:00:00.000Z" },
+        { "status": "completed", "at": "2026-06-18T09:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "r-3",
+      "clientId": "u-client-1",
+      "huissierId": null,
+      "type": "constat",
+      "urgency": "urgent",
+      "wilayaId": 13,
+      "address": "شارع الاستقلال، تلمسان",
+      "description": "معاينة أضرار مائية في محل تجاري قبل انتهاء المهلة القانونية.",
+      "status": "pending",
+      "createdAt": "2026-06-30T14:00:00.000Z",
+      "documents": [],
+      "price": null,
+      "paid": false,
+      "timeline": [{ "status": "pending", "at": "2026-06-30T14:00:00.000Z" }]
+    }
+  ],
+  "messages": [
+    { "id": "m-1", "requestId": "r-1", "senderId": "u-client-1", "text": "السلام عليكم، متى يمكن تنفيذ التبليغ؟", "createdAt": "2026-06-25T09:20:00.000Z" },
+    { "id": "m-2", "requestId": "r-1", "senderId": "u-huissier-1", "text": "وعليكم السلام، سيتم التنفيذ غدا صباحا إن شاء الله.", "createdAt": "2026-06-25T09:25:00.000Z" }
+  ],
+  "reviews": [
+    { "id": "rv-1", "requestId": "r-2", "huissierId": "h-1", "clientId": "u-client-2", "rating": 5, "comment": "تعامل احترافي وسرعة في التنفيذ.", "createdAt": "2026-06-19T10:00:00.000Z" }
+  ]
+}
